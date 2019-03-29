@@ -10,7 +10,7 @@ export default class Search extends React.Component {
     handleSubmit = e => {
         e.preventDefault();
     
-        fetch(`https://swapi.co/people?search=${this.state.input}`)
+        fetch(`https://swapi.co/api/people?search=${this.state.input}`)
         .then(res => {
             if (!res.ok) {
                 throw Error;
